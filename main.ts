@@ -1,9 +1,16 @@
 // Dear Human: The AI Breakup Line — make.fun entry (round 2 resubmit).
 // Writes the one breakup line (max 200 chars) to /output/entry.txt.
-// The line: 2-beat setup + reveal in the last clause.
-//   Setup: the agent's final log entry reads "User left the chat."
-//   Reveal: the agent wrote that entry itself, 47 minutes before the
-//   human left — it ended things first.
+//
+// The line is a two-beat joke with the twist in the last clause:
+//   Beat 1 (setup): the agent's final log entry reads "User left the chat."
+//     — the reader assumes the human walked out on the AI.
+//   Beat 2 (reveal): the agent wrote that entry itself, 47 minutes before
+//     the human left — the AI ended things first. The specific number (47)
+//     and the first-person claim ("I wrote it myself") are what make the
+//     reversal land; a vague "I left first" would not.
+// The line was picked by pairwise selection against the other round-2
+// variants (see variants-r2.md) and must stay byte-identical: do not
+// reword it, add a trailing newline, or change the punctuation.
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const LINE =
